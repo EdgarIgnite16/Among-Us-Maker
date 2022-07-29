@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- layout 1: Khu vực hiển thị hình ảnh đối tượng -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#000">
+
+        <!-- layout hình ảnh đối tượng -->
+        <RelativeLayout
+            android:id="@+id/layoutBackgroundDraw"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/tongs">
+
+            <!-- Hình ảnh đối tượng -->
+            <ImageView
+                android:id="@+id/ivBodyDraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/ivClothesDraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/ivHatDraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ivPetDraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/ivTagDraw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+        <!-- Nút tải hình ảnh đối tượng nhân vật -->
+        <ImageView
+            android:id="@+id/ivDownloadImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="4dp"
+            android:src="@drawable/downloading" />
+
+    </RelativeLayout>
+
+    <!-- layout 2: khu vực lựa chọn & thay đổi ngoại trang đối tượng -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1">
+
+        <!-- layout tuỳ chọn chỉnh sửa trang phục (Nằm dọc) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#DDDDDD">
+
+            <!-- thanh tuỳ chọn chỉnh sửa từng bộ phận (Nằm ngang) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#EFEFEF">
+
+                <ImageView
+                    android:id="@+id/ivSelectBackground"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/z1"
+                    android:background="@drawable/border_select_item_withcolor" />
+
+                <ImageView
+                    android:id="@+id/ivSelectBody"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/x7"
+                    android:background="@drawable/border_select_item_withoutcolor"/>
+
+                <ImageView
+                    android:id="@+id/ivSelectHat"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/v10"
+                    android:background="@drawable/border_select_item_withoutcolor"/>
+
+                <ImageView
+                    android:id="@+id/ivSelectClothes"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/n2"
+                    android:background="@drawable/border_select_item_withoutcolor"/>
+
+                <ImageView
+                    android:id="@+id/ivSelectPet"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/m1"
+                    android:background="@drawable/border_select_item_withoutcolor"/>
+
+                <ImageView
+                    android:id="@+id/ivSelectTag"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/l3"
+                    android:background="@drawable/border_select_item_withoutcolor"/>
+
+            </LinearLayout>
+
+            <!-- khung lựa chọn các tuỳ chọn vật phẩm (Dạng lưới) -->
+            <GridView
+                android:id="@+id/gvListItemResource"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="5">
+
+            </GridView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
